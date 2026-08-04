@@ -651,10 +651,16 @@ CLASS_META = {
 CLASS_NAMES = list(CLASS_META.keys())
 
 @st.cache_resource(show_spinner=False)
+from pathlib import Path
+from ultralytics import YOLO
+
+MODEL_PATH = Path(__file__).parent / "models" / "best.pt"
+
 def load_model():
     try:
-        return YOLO("best.pt")
-    except Exception:
+        return YOLO(str(MODEL_PATH))
+    except Exception as e:
+        print(f"Error loading model: {e}")
         return None
 
 # Loading indicator
