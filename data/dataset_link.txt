@@ -1,0 +1,11 @@
+Traffic Violation Detection Dataset
+
+This project uses a custom dataset created by combining and preprocessing multiple traffic violation datasets.
+
+Primary Dataset:
+https://universe.roboflow.com/sample2-yj0ke/violation-l6kaz
+
+The dataset was further cleaned, merged, balanced, and annotated for training the final YOLOv8 model.
+
+Note:
+The complete dataset (~680 MB) is not included in this repository because of its size.

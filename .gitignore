@@ -1,0 +1,9 @@
+# Dataset
+data/train/
+data/valid/
+data/test/
+data/dataset_files.zip
+
+# Temporary files
+*.cache
+*.tmp
