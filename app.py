@@ -8,6 +8,8 @@ import os
 import time
 import base64
 from io import BytesIO
+from pathlib import Path
+from ultralytics import YOLO
 import streamlit.components.v1 as components
 
 # ══════════════════════════════════════════════════════════════════
@@ -651,8 +653,6 @@ CLASS_META = {
 CLASS_NAMES = list(CLASS_META.keys())
 
 @st.cache_resource(show_spinner=False)
-from pathlib import Path
-from ultralytics import YOLO
 
 MODEL_PATH = Path(__file__).parent / "models" / "best.pt"
 
