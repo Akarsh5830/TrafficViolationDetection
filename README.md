@@ -179,10 +179,6 @@ Traffic-Violation-Detection/
 │   ├── dataset_link.txt
 │   └── README.md
 │
-├── docs/
-│   ├── Project_Report.pdf
-│   └── Presentation.pptx
-│
 ├── images/
 │   ├── app.png
 │   ├── architecture.png
