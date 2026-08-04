@@ -652,17 +652,16 @@ CLASS_META = {
 }
 CLASS_NAMES = list(CLASS_META.keys())
 
-@st.cache_resource(show_spinner=False)
-
 MODEL_PATH = Path(__file__).parent / "models" / "best.pt"
 
+@st.cache_resource(show_spinner=False)
 def load_model():
     try:
         return YOLO(str(MODEL_PATH))
     except Exception as e:
-        print(f"Error loading model: {e}")
+        st.error(f"Error loading model: {e}")
         return None
-
+        
 # Loading indicator
 with st.spinner("🚦 Initializing TrafficVision AI..."):
     model = load_model()
